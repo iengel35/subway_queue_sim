@@ -1,0 +1,44 @@
+file 13457 1586461374                                           
+version 2
+run General-4-20200409-15:42:38-5100
+attr configname General
+attr datetime 20200409-15:42:38
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network my_PQ
+attr processid 5100
+attr repetition 4
+attr replication #4
+attr resultdir results
+attr runnumber 4
+attr seedset 4
+param **.source.interArrivalTime "exponential(1 s)"
+param **.source1.interArrivalTime "exponential(2 s)"
+param **.source.numJobs 200
+param **.source.jobType 0
+param **.source1.numJobs 100
+param **.source1.jobType 1
+param **.delay.delay "3.5 s + normal(.3 s, .1 s)"
+param **.delay1.delay "30.5 s + normal(.3 s, .1s)"
+param **.delay2.delay "0.5 s +  normal(.3 s, .1s)"
+param **.delay3.delay "0.5 s +  normal(.3 s, .1s)"
+param **.server.serviceTime "exponential(.01 s)"
+param **.server1.serviceTime "exponential(.01 s)"
+
+vector 0 my_PQ.passiveQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 my_PQ.passiveQueue1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 my_PQ.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1273 9 0 0 0 0 1 0 0 0 0
+1	1282 116 0 2629 0 194.555722563794 5 0 1 2 2
+2	1398 12057 235 2802 25.379341096157 223.685281934715 300 21.586380025451 50.86133572892 9407.1628078624 349574.68448829
+

@@ -1,0 +1,150 @@
+version 2
+run General-1-20191217-19:14:53-7768
+attr configname General
+attr datetime 20191217-19:14:53
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network my_PQ
+attr processid 7768
+attr repetition 1
+attr replication #1
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+param **.source.interArrivalTime "exponential(1 s)"
+param **.source1.interArrivalTime "exponential(2 s)"
+param **.source.numJobs 200
+param **.source.jobType 0
+param **.source1.numJobs 100
+param **.source1.jobType 1
+param **.delay.delay "3.5 s + normal(.3 s, .1 s)"
+param **.delay1.delay "30.5 s + normal(.3 s, .1s)"
+param **.delay2.delay "0.5 s +  normal(.3 s, .1s)"
+param **.delay3.delay "0.5 s +  normal(.3 s, .1s)"
+param **.server.serviceTime "exponential(.01 s)"
+param **.server1.serviceTime "exponential(.01 s)"
+
+scalar my_PQ.source created:last 200
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar my_PQ.source1 created:last 100
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar my_PQ.passiveQueue queueingTime:mean nan
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar my_PQ.passiveQueue queueingTime:max nan
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar my_PQ.passiveQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar my_PQ.passiveQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar my_PQ.passiveQueue dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar my_PQ.passiveQueue1 queueingTime:mean 0.0104647811728
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar my_PQ.passiveQueue1 queueingTime:max 0.024201453869
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar my_PQ.passiveQueue1 queueLength:timeavg 0.00021403960678583
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar my_PQ.passiveQueue1 queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar my_PQ.passiveQueue1 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar my_PQ.sink generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar my_PQ.sink generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar my_PQ.sink delaysVisited:mean 1.6666666666667
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar my_PQ.sink delaysVisited:max 3
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar my_PQ.sink queuesVisited:mean 0.033333333333333
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar my_PQ.sink queuesVisited:max 2
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar my_PQ.sink totalServiceTime:mean 0.00990462250837
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar my_PQ.sink totalServiceTime:max 0.069491142873
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar my_PQ.sink totalDelayTime:mean 13.337626766356
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar my_PQ.sink totalDelayTime:max 32.852594931182
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar my_PQ.sink totalQueueingTime:mean 0.00017441301954667
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar my_PQ.sink totalQueueingTime:max 0.024201453869
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar my_PQ.sink lifeTime:mean 31.347705801884
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar my_PQ.sink lifeTime:max 50.858865350952
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar my_PQ.server busy:timeavg 0.003843355159589
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar my_PQ.server1 busy:timeavg 0.0083115946977316
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar my_PQ.delay delayedJobs:timeavg 3.1077344561257
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, timeavg"
+scalar my_PQ.delay delayedJobs:max 11
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, max"
+scalar my_PQ.delay1 delayedJobs:timeavg 12.597505119598
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, timeavg"
+scalar my_PQ.delay1 delayedJobs:max 23
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, max"
+scalar my_PQ.delay2 delayedJobs:timeavg 0.33589683948037
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, timeavg"
+scalar my_PQ.delay2 delayedJobs:max 3
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, max"
+scalar my_PQ.delay3 delayedJobs:timeavg 0.32679526757447
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, timeavg"
+scalar my_PQ.delay3 delayedJobs:max 3
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, max"
+
